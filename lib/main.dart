@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-
 import 'stores/MyHome.dart';
 
 void main() {
@@ -12,12 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoApp(
+    return MaterialApp(
       title: 'Flutter Demo',
-      theme: CupertinoThemeData(
-        primaryColor: Colors.lightGreenAccent,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
       ),
-      home: MyHome(title: 'Flutter Demo Home Page'),
+      home: const MyHome(title: 'Flutter Demo Home Page'),
     );
   }
 }
